@@ -195,11 +195,11 @@ nav a:hover {
 }
 
 .issuer-header img {
-    width: auto;
-    max-width: 420px;
-    max-height: 92px;
+    width: 260px;
+    height: 65px;
     object-fit: contain;
-    border-radius: 12px;
+    object-position: center;
+    border-radius: 10px;
 }
 
 .cc-grid {
@@ -346,8 +346,8 @@ footer p {
     }
 
     .issuer-header img {
-        max-width: 260px;
-        max-height: 70px;
-    }
+    width: 220px;
+    height: 55px;
+}
 
 }
