@@ -184,3 +184,72 @@ footer p {
         font-size: 2.8rem;
     }
 }
+
+/* ===========================
+   CREDIT CARD TILES
+=========================== */
+
+.credit-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.credit-card-tile {
+    position: relative;
+    display: block;
+    height: 220px;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #111;
+    border: 1px solid #242424;
+    transition: all .3s ease;
+}
+
+.credit-card-tile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+
+    filter: brightness(35%);
+    transform: scale(.95);
+
+    transition: all .3s ease;
+}
+
+.credit-card-tile:hover {
+    border-color: #d4af37;
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(212,175,55,.15);
+}
+
+.credit-card-tile:hover img {
+    filter: brightness(100%);
+    transform: scale(1);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0,0,0,.45);
+
+    transition: opacity .3s ease;
+}
+
+.card-overlay h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.credit-card-tile:hover .card-overlay {
+    opacity: 0;
+}
