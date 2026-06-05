@@ -1,293 +1,123 @@
 /* ====================================
-   GLOBAL
-==================================== /
+   CREDIT CARD PAGE
+==================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.cc-page {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 40px 100px;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background: #050505;
-    color: #f5f5f5;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    line-height: 1.6;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/ ====================================
-   HEADER
-==================================== /
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 6%;
-
-    background: rgba(5,5,5,.95);
-    backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid #1d1d1d;
-}
-
-.logo {
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: #d4af37;
-}
-
-nav {
-    display: flex;
-    gap: 22px;
-}
-
-nav a {
-    color: #d8d8d8;
-    font-size: .92rem;
-    transition: .2s ease;
-}
-
-nav a:hover {
-    color: #d4af37;
-}
-
-/ ====================================
-   HERO
-==================================== /
-
-.hero {
+.cc-hero {
     text-align: center;
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 90px 20px 60px;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 90px 20px 70px;
 }
 
-.eyebrow {
-    color: #d4af37;
-    font-size: .8rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-
-    margin-bottom: 18px;
-}
-
-.hero h1 {
+.cc-hero h1 {
     font-size: clamp(2.8rem, 6vw, 5rem);
     line-height: 1.1;
-
-    margin-bottom: 24px;
+    margin-bottom: 22px;
 }
 
-.description {
-    max-width: 700px;
-    margin: auto;
-
+.cc-hero p {
     color: #b8b8b8;
     font-size: 1.05rem;
 }
 
-.btn {
-    display: inline-block;
-
-    margin-top: 35px;
-
-    padding: 14px 28px;
-
-    background: #d4af37;
-    color: #000;
-
-    border-radius: 999px;
-
-    font-weight: 700;
-
-    transition: .25s ease;
+.issuer-group {
+    margin-bottom: 80px;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-/ ====================================
-   SECTION WRAPPER
-==================================== /
-
-.categories {
-    max-width: 1400px;
-    margin: auto;
-    padding: 0 40px 100px;
-}
-
-.categories h2 {
+.issuer-group h2 {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 30px;
-    margin-top: 60px;
+    margin-bottom: 32px;
 }
 
-/ ====================================
-   HOMEPAGE CARDS
-==================================== /
-
-.grid {
+.cc-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-    gap: 24px;
-}
-
-.card {
-    background: #121212;
-    border: 1px solid #232323;
-    border-radius: 20px;
-
-    padding: 28px;
-
-    transition: .25s ease;
-}
-
-.card:hover {
-    border-color: #d4af37;
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    color: #d4af37;
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #b8b8b8;
-}
-
-/ ====================================
-   CREDIT CARD GRID
-==================================== /
-
-.credit-card-grid {
-    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 28px;
-
-    margin-bottom: 60px;
+    gap: 32px;
 }
 
-.credit-card-tile {
+.cc-tile,
+.cc-placeholder {
     position: relative;
-
-    width: 320px;
-    height: 200px;
-
-    border-radius: 18px;
-
+    width: 100%;
+    height: 215px;
+    border-radius: 22px;
     overflow: hidden;
-
-    border: 1px solid #242424;
-
-    background: #111;
-
-    transition: .3s ease;
+    background: #121212;
+    border: 1px solid #262626;
+    transition: 0.3s ease;
 }
 
-.credit-card-tile:hover {
+.cc-tile:hover,
+.cc-placeholder:hover {
     transform: translateY(-6px);
-
     border-color: #d4af37;
-
-    box-shadow: 0 15px 35px rgba(212,175,55,.18);
+    box-shadow: 0 18px 45px rgba(212, 175, 55, 0.18);
 }
 
-.credit-card-tile img {
+.cc-tile img {
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
-    filter: brightness(35%);
-
-    transition: .3s ease;
+    filter: brightness(42%);
+    transition: 0.3s ease;
 }
 
-.credit-card-tile:hover img {
+.cc-tile:hover img {
     filter: brightness(100%);
 }
 
-.card-overlay {
+.cc-overlay {
     position: absolute;
     inset: 0;
-
-    background: rgba(0,0,0,.45);
-
+    background: rgba(0, 0, 0, 0.48);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    transition: .3s ease;
+    transition: 0.3s ease;
 }
 
-.card-overlay h3 {
-    color: white;
+.cc-overlay h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
     text-align: center;
-    font-size: 1.15rem;
-    padding: 20px;
+    margin-bottom: 8px;
 }
 
-.credit-card-tile:hover .card-overlay {
+.cc-overlay span {
+    color: #d4af37;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.cc-tile:hover .cc-overlay {
     opacity: 0;
 }
 
-/ ====================================
-   FOOTER
-==================================== /
-
-footer {
-    border-top: 1px solid #1d1d1d;
-    padding: 40px 6%;
+.cc-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 28px;
+    text-align: center;
 }
 
-footer p {
+.cc-placeholder h3 {
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.cc-placeholder span {
     color: #8e8e8e;
-    font-size: .85rem;
-}
-
-/ ====================================
-   MOBILE
-==================================== */
-
-@media (max-width: 1000px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .hero {
-        padding-top: 70px;
-    }
-
-    .credit-card-tile {
-        width: 300px;
-        height: 188px;
-    }
+    font-size: 0.85rem;
 }
