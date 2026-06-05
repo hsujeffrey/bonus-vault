@@ -166,13 +166,40 @@ nav a:hover {
 }
 
 .issuer-group {
-    margin-bottom: 85px;
+    margin-bottom: 95px;
 }
 
 .issuer-group h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 34px;
+}
+
+/* Issuer logo headers */
+
+.issuer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.issuer-header::before,
+.issuer-header::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    max-width: 280px;
+    background: linear-gradient(to right, transparent, #d4af37, transparent);
+}
+
+.issuer-header img {
+    width: auto;
+    max-width: 420px;
+    max-height: 92px;
+    object-fit: contain;
+    border-radius: 12px;
 }
 
 .cc-grid {
@@ -307,6 +334,20 @@ footer p {
     .cc-tile,
     .cc-placeholder {
         height: 210px;
+    }
+
+    .issuer-header {
+        gap: 14px;
+    }
+
+    .issuer-header::before,
+    .issuer-header::after {
+        max-width: 80px;
+    }
+
+    .issuer-header img {
+        max-width: 260px;
+        max-height: 70px;
     }
 
 }
