@@ -169,12 +169,6 @@ nav a:hover {
     margin-bottom: 95px;
 }
 
-.issuer-group h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 34px;
-}
-
 /* Issuer logo headers */
 
 .issuer-header {
@@ -194,12 +188,13 @@ nav a:hover {
     background: linear-gradient(to right, transparent, #d4af37, transparent);
 }
 
-.issuer-header img {
+.issuer-logo {
     width: 260px;
     height: 65px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     border-radius: 10px;
+    display: block;
 }
 
 .cc-grid {
@@ -245,12 +240,10 @@ nav a:hover {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     transition: 0.3s ease;
 }
 
@@ -345,9 +338,8 @@ footer p {
         max-width: 80px;
     }
 
-    .issuer-header img {
-    width: 220px;
-    height: 55px;
-}
-
+    .issuer-logo {
+        width: 220px;
+        height: 55px;
+    }
 }
