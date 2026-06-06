@@ -331,6 +331,18 @@ nav a:hover::after {
     margin-bottom: 4px;
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 35px;
+    color: #d4af37;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.back-link:hover {
+    color: #e7c85a;
+}
+
 .fine-print {
     color: #8e8e8e;
     font-size: 0.85rem;
