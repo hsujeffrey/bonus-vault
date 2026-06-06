@@ -27,9 +27,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 8%;
-    background: #050505;
-    border-bottom: 1px solid #1f1f1f;
+    padding: 22px 6%;
+    background: rgba(5, 5, 5, 0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -37,25 +38,53 @@ header {
 
 .logo {
     color: #d4af37;
-    font-size: 1.5rem;
-    font-weight: 800;
+    font-size: 1.65rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
 }
 
 nav {
     display: flex;
-    gap: 22px;
     align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 nav a {
-    color: #e2e2e2;
-    font-size: 0.9rem;
-    font-weight: 600;
+    position: relative;
+    color: #d8d8d8;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 9px 13px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    transition: 0.22s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 1px;
+    background: #d4af37;
+    transform: translateX(-50%);
+    transition: width 0.22s ease;
 }
 
 nav a:hover {
-    color: #d4af37;
+    color: #ffffff;
+    background: rgba(212, 175, 55, 0.08);
+    border-color: rgba(212, 175, 55, 0.28);
+}
+
+nav a:hover::after {
+    width: 55%;
 }
 
 /* HOMEPAGE */
@@ -430,13 +459,22 @@ footer p {
 @media (max-width: 900px) {
     header {
         flex-direction: column;
-        gap: 16px;
+        gap: 18px;
         padding: 20px;
+    }
+
+    .logo {
+        font-size: 1.45rem;
     }
 
     nav {
         justify-content: center;
-        gap: 14px;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.72rem;
+        padding: 8px 10px;
     }
 
     .cc-page {
